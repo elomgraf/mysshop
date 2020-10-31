@@ -3,6 +3,8 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { AngularFireAuth} from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
 
 @Component({
     selector: 'app-navbar',
@@ -16,15 +18,18 @@ export class NavbarComponent implements OnInit {
 
           products: Observable<any[]>;
          categories: Observable<any[]>;
-    
- 
 
-    constructor(public location: Location, private router: Router, private firestore: AngularFirestore) {
+
+    constructor(public location: Location, private router: Router, private firestore: AngularFirestore,
+        private auth: AngularFireAuth) {
     }
+
+
 
     ngOnInit() {
 
-this.products = this.firestore.collection('products').valueChanges();
+
+        this.products = this.firestore.collection('products').valueChanges();
         this.categories = this.firestore.collection('categories').valueChanges();
 
       this.router.events.subscribe((event) => {
@@ -64,4 +69,11 @@ this.products = this.firestore.collection('products').valueChanges();
             return false;
         }
     }
+
+    login() {
+    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+    logout() {
+    this.auth.signOut();
+  }
 }

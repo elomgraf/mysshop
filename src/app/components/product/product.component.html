@@ -33,8 +33,8 @@
                                     <div class="col-md-6 pro_detail">
 
                                         <h1 class="pro__name">{{product.name}} </h1>
-                                        <h3 class="pro__dtitle">description</h3>
-                                        <p class="pro__desc">{{product.description}}</p>
+
+
                                         <h3 class="pro__price">{{product.price}}</h3>
                                         <div class="form-group pro__qty">
                                             <input type="number" class="form-control" id="pro-qty" value="1">
@@ -42,6 +42,10 @@
                                         <div class="pro__btn">
                                             <a [routerLink]="['/cart']" class="btn btn-outline-warning pro__btn">add to cart</a>
                                         </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h3 class="pro__dtitle mt-5">description</h3>
+                                        <p class="pro__desc">{{product.description}}</p>
                                     </div>
                                 </div>
                             </div>

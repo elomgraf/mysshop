@@ -83,7 +83,7 @@
                                         <thead class="cart__total">
                                             <td>Total:</td>
                                             <td>3600$</td>
-                                            <td> <a href="#" class="btn btn-outline-warning pro__btn" (click)="signIn()">Check out</a></td>
+                                            <td> <a [routerLink]="['/checkout']" (click)="signIn()" class="btn btn-outline-warning pro__btn">Check out</a></td>
                                         </thead>
                                     </table>
                                 </div>

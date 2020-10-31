@@ -100,8 +100,9 @@
                     </a>
                     <div class="dropdown-menu">
                         <a [routerLink]="['/login']" class="dropdown-item">Login</a>
-                        <a [routerLink]="['/register']" class="dropdown-item">Register</a>
-                        <a [routerLink]="['/login']" class="dropdown-item">Dashboard</a>
+                        <!-- <a *ngIf="(auth | async)" (click)="logout()" class=" dropdown-item ">Logout</a> -->
+                        <a [routerLink]="[ '/register'] " class="dropdown-item ">Register</a>
+                        <a [routerLink]="[ '/login'] " class="dropdown-item ">Dashboard</a>
                     </div>
                 </li>
             </ul>

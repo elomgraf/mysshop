@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
 
     this.afAuth.getRedirectResult().then(result => {
       if (result.user !== undefined) {
-        this.router.navigate(['/checkout']);
+        //this.router.navigate(['/checkout']);
       }
     });
   }
