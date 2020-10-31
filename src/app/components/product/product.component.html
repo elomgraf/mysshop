@@ -1,0 +1,74 @@
+<main>
+    <div class="position-relative">
+        <!-- shape Hero -->
+        <section class="section section-lg section-shaped pb-250">
+            <div class="shape shape-style-1 shape-default">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="container py-lg-md d-flex">
+                <div class="col px-0">
+                    <div class="row">
+
+
+                        <!-- /BREADCRUMB -->
+
+                        <!-- SECTION  product details -->
+                        <section>
+
+                            <div class="container">
+                                <div class="row" *ngFor="let product of products | async">
+
+
+                                    <div class="col-md-6">
+                                        <img class="pro__img img-fluid" src="{{product.image}}" alt="">
+                                    </div>
+                                    <div class="col-md-6 pro_detail">
+
+                                        <h1 class="pro__name">{{product.name}} </h1>
+                                        <h3 class="pro__dtitle">description</h3>
+                                        <p class="pro__desc">{{product.description}}</p>
+                                        <h3 class="pro__price">{{product.price}}</h3>
+                                        <div class="form-group pro__qty">
+                                            <input type="number" class="form-control" id="pro-qty" value="1">
+                                        </div>
+                                        <div class="pro__btn">
+                                            <a [routerLink]="['/cart']" class="btn btn-outline-warning pro__btn">add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <!-- /SECTION -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+            <div class="separator separator-bottom separator-skew">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+            </div>
+        </section>
+        <!-- 1st Hero Variation -->
+    </div>
+
+
+    <!-- Section -->
+    <div class="section">
+        <!-- container -->
+
+        <!-- /container -->
+    </div>
+    <!-- /Section -->
+</main>

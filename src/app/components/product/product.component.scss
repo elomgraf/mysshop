@@ -1,0 +1,38 @@
+$color: #EF5A31;
+.pro__img {
+    position: relative;
+    border-radius: 2rem;
+    height: 90vh;
+    width: 100%;
+}
+
+.pro__name {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pro__dtitle {
+    color: $color;
+    font-size: 2rem;
+}
+
+.pro__desc {
+    color: #fff;
+}
+
+.pro__price {
+    color: $color;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.pro__btn {
+    margin-top: 1rem;
+}
+
+.pro__qty {
+    width: 8rem;
+}

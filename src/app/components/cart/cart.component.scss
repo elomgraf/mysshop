@@ -1,0 +1,45 @@
+$color: #fb6340;
+.cart__cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart__table {
+    width: 90vw;
+    border-radius: 1rem;
+}
+
+.card__qty {
+    width: 80px;
+}
+
+.cart__remove {
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.cart__remove:hover {
+    color: $color;
+}
+
+.cart__tot {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #172b4d;
+}
+
+.cart__total {
+    right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    td {
+        color: $color;
+        font-size: 2rem;
+        margin: 1rem;
+        font-weight: 600;
+    }
+}

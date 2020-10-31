@@ -1,0 +1,111 @@
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+    <div class="container">
+        <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+            <img src="./assets/img/p/logo2.png" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a [routerLink]="['/home']">
+                            <img src="./assets/img/p/logo1.png">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" [routerLink]="['/products']" data-toggle="tooltip">
+                        products
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['/categories']">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Categories</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <li class="dropdown-item" *ngFor="let category of categories | async">
+                            <a [routerLink]="['/category']"> {{category.name}} </a>
+                        </li>
+                    </div>
+                </li>
+
+
+
+
+
+
+
+            </ul>
+            <!--
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+
+                <li class="input-group nav-item">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Search" type="text">
+
+                </li>
+                <button type="submit" class="btn btn-outline-warning">Search</button>
+            </ul>
+        -->
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                        <i class="ni ni-ui-04 d-lg-none"></i>
+                        <span class="nav-link-inner--text"><i class="ni ni-cart icon__cart"></i>
+                        <div class="cart__qty"> <p>3</p></div>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu-lg dropdown-menu">
+                        <div class="dropdown-menu-inner">
+                            <h4 class="display-4 text-warning mb-md-1 d-flex justify-content-center">In my Cart</h4>
+                            <div class="media d-flex align-items-center">
+                                <div class="avatar rounded-circle mr-3">
+                                    <img alt="" src="./assets/img/p/category-1.jpg" class="img-fluid">
+                                </div>
+                                <div class="media-body ml-3">
+
+                                    <h3 class="h5 d-none d-md-inline-block mb-0">Iphone 12 <span>(3)</span></h3>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="cart-btns d-flex justify-content-center">
+
+                                <a [routerLink]="['/cart']"><button type="button" class="btn btn-outline-default btn-sm">View Cart</button></a>
+                                <a [routerLink]="['/checkout']"><button type="button" class="btn btn-outline-default btn-sm ml-3">Checkout <i class="fa fa-arrow-circle-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text icon__cart"><i class="ni ni-single-02"></i></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a [routerLink]="['/login']" class="dropdown-item">Login</a>
+                        <a [routerLink]="['/register']" class="dropdown-item">Register</a>
+                        <a [routerLink]="['/login']" class="dropdown-item">Dashboard</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

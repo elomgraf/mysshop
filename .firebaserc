@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-supershop": {
+      "hosting": {
+        "argon-design-system-angular": [
+          "my-supershop"
+        ]
+      }
+    }
+  }
+}

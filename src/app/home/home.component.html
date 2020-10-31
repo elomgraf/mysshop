@@ -1,0 +1,160 @@
+<main>
+    <div class="position-relative">
+        <!-- Hero for FREE version -->
+        <section class="section section-lg section-hero section-shaped">
+            <!-- Background circles -->
+            <div class="shape shape-style-1 shape-primary">
+                <span class="span-150"> </span>
+                <span class="span-50"></span>
+                <span class="span-50"></span>
+                <span class="span-75"></span>
+                <span class="span-100"></span>
+                <span class="span-75"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+            </div>
+            <div class="container shape-container d-flex align-items-center py-lg">
+                <div class="col px-0">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-12 text-center">
+                            <img src="./assets/img/p/iph.png" style="width: 500px;" class="img-fluid">
+                            <h1 class="intro__home">the Best products for best price </h1>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+            <div class="separator separator-bottom separator-skew zindex-100">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+            </div>
+        </section>
+        <!-- Caegories -->
+        <section>
+            <div class="container MT-5">
+                <h2 class="display-1"> Categories</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6" *ngFor="let category of categories | async">
+                        <div class="card__c">
+                            <div class="card__c__thumb">
+                                <a href="#"> <img class="img-fluid" src="{{category.image}}" alt="{{category.name}}"></a>
+                            </div>
+                            <div class="card__c__body">
+                                <h2 class="card__c__title"> <a href="">{{category.name}}</a> </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- end Categories-->
+        <section class="mt-5">
+            <div class="container">
+                <h2 class="display-1"> Products</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6" *ngFor="let product of products | async">
+                        <article class="card">
+                            <div class="card__thumb">
+                                <a href="#"> <img class="img-fluid" src="{{product.image}}" alt=""> alt=""></a>
+                            </div>
+                            <div class="card__price">
+                                <div class="card__price__value">
+                                    {{product.price}}$
+                                </div>
+
+                            </div>
+                            <div class="card__body">
+                                <div class="card__category"> <a href="#">{{product.category}}</a> </div>
+                                <h2 class="card__title"> <a href="">{{product.name}}</a> </h2>
+
+                                <p class="card__description"> {{product.description | slice:0:255 }}
+                                </p>
+                            </div>
+                            <footer class="card__footer">
+                                <a [routerLink]="['/product']">  class="card__btn"><i class="ni ni-bullet-list-67"></i></a>
+                                <button class="card__btn"> <i class="ni ni-cart"></i></button>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Products -->
+
+
+        <!-- end Products-->
+
+        <!-- About us -->
+        <section class="section pb-0 bg-gradient-warning">
+            <div class="container">
+                <div class="row row-grid align-items-center">
+                    <div class="col-md-6 order-lg-2 ml-lg-auto">
+                        <div class="position-relative pl-md-5">
+                            <img src="./assets/img/ill/ill-2.svg" class="img-center img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="d-flex px-3">
+                            <div>
+                                <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                                    <i class="ni ni-building text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="pl-4">
+                                <h4 class="display-1 text-white">About us </h4>
+                                <p class="text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+                            </div>
+                        </div>
+                        <div class="card shadow shadow-lg--hover mt-5">
+                            <div class="card-body">
+                                <div class="d-flex px-3">
+                                    <div>
+                                        <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                                            <i class="ni ni-satisfied"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-4">
+                                        <h5 class="title text-success">Awesome Product</h5>
+                                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow shadow-lg--hover mt-5">
+                            <div class="card-body">
+                                <div class="d-flex px-3">
+                                    <div>
+                                        <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                                            <i class="ni ni-trophy"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-4">
+                                        <h5 class="title text-warning">Best price</h5>
+                                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+            <div class="separator separator-bottom separator-skew zindex-100">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+            </div>
+        </section>
+    </div>
+
+</main>
